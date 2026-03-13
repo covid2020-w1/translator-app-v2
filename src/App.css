@@ -1,0 +1,9 @@
+body{
+  background-color: #181818;
+  color: #eee;
+}
+
+.container{
+  border: 3px solid #eee;
+  border-radius: 8px;
+}
