@@ -1,8 +1,19 @@
 import express from 'express'
 import OpenAi from "openai"
 import "dotenv/config"
+import cors from 'cors'
 
 const app = express()
+
+const allowedOrigin = process.env.FRONTEND_URL
+
+app.use(cors({
+    origin: allowedOrigin,
+    methods: ["GET, POST"],
+    allowedHeaders: ["Content-Type"],
+
+}))
+
 app.use(express.json())
 
 const openai = new OpenAi({
